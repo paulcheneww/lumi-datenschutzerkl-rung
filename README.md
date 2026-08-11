@@ -1,2 +1,0 @@
-# lumi-datenschutzerkl-rung
-Datenschutzerklärung
