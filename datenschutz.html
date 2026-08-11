@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumi – Datenschutzerklärung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF7E6;
+    --cream-light:#FFFCF4;
+    --yellow:#F7C65B;
+    --yellow-soft:#FBDD93;
+    --yellow-deep:#E8A33D;
+    --brown:#5B4630;
+    --brown-soft:#8A7358;
+    --white:#FFFFFF;
+    --line:#F0DDB0;
+    --note:#E2665A;
+    --note-bg:#FDEDE9;
+    --radius:28px;
+    --shadow: 0 18px 40px -18px rgba(180, 130, 40, 0.35);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream-light);
+    color:var(--brown);
+    font-family:'Nunito', sans-serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  h1,h2,h3,.eyebrow{ font-family:'Baloo 2', sans-serif; }
+
+  a{ color:var(--yellow-deep); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  a:focus-visible, button:focus-visible{ outline:3px solid var(--yellow-deep); outline-offset:3px; border-radius:6px; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:url('banner.png') center / cover no-repeat;
+    padding: 4.5rem 1.5rem 8rem;
+    text-align:center;
+    isolation:isolate;
+  }
+  .hero-inner{
+    max-width:760px;
+    margin:0 auto;
+    position:relative;
+  }
+  .mascot{
+    width:132px;
+    height:132px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow: var(--shadow), 0 0 0 8px var(--white);
+    margin-bottom:1.4rem;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-weight:600;
+    font-size:0.95rem;
+    letter-spacing:.03em;
+    color:var(--yellow-deep);
+    background:var(--white);
+    padding:.35rem .9rem;
+    border-radius:999px;
+    box-shadow: 0 6px 16px -8px rgba(180,130,40,.4);
+    margin-bottom:1rem;
+  }
+  .hero h1{
+    font-size:clamp(2.2rem, 5vw, 3.2rem);
+    font-weight:800;
+    margin:0 0 .8rem;
+    color:var(--brown);
+  }
+  .hero p{
+    font-size:1.15rem;
+    color:var(--brown-soft);
+    max-width:520px;
+    margin:0 auto;
+  }
+
+  .wave{
+    position:absolute;
+    left:0; right:0; bottom:-1px;
+    height:90px;
+    background:var(--cream-light);
+    clip-path: path('M0,40 C 240,110 480,-20 720,40 C 960,100 1200,-10 1440,50 L1440,120 L0,120 Z');
+  }
+  @media (max-width:700px){
+    .wave{ clip-path: path('M0,50 C 180,100 360,10 540,50 C 720,90 900,10 1080,50 L1080,120 L0,120 Z'); }
+  }
+
+  /* ---------- LAYOUT ---------- */
+  main{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 1.5rem 5rem;
+  }
+
+  .updated{
+    text-align:center;
+    color:var(--brown-soft);
+    font-size:.95rem;
+    margin:-2.5rem 0 3rem;
+  }
+
+  nav.toc{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1.4rem 1.6rem;
+    margin-bottom:3rem;
+    box-shadow:var(--shadow);
+  }
+  nav.toc h2{
+    font-size:1rem;
+    margin:0 0 .8rem;
+    color:var(--yellow-deep);
+    text-transform:uppercase;
+    letter-spacing:.05em;
+  }
+  nav.toc ol{
+    margin:0; padding:0 0 0 1.2rem;
+    columns:2;
+    gap:1rem;
+  }
+  nav.toc li{ margin-bottom:.5rem; break-inside:avoid; }
+  nav.toc a{ color:var(--brown); font-weight:700; }
+  nav.toc a:hover{ color:var(--yellow-deep); }
+  @media (max-width:560px){ nav.toc ol{ columns:1; } }
+
+  section.clause{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:2rem 2.2rem;
+    margin-bottom:1.6rem;
+    scroll-margin-top:1.5rem;
+    position:relative;
+  }
+  section.clause .num{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    color:var(--yellow);
+    font-size:1rem;
+    letter-spacing:.05em;
+  }
+  section.clause h2{
+    margin:.2rem 0 1rem;
+    font-size:1.5rem;
+    color:var(--brown);
+  }
+  section.clause h3{
+    font-size:1.05rem;
+    margin:1.3rem 0 .5rem;
+    color:var(--yellow-deep);
+  }
+  section.clause p{ margin:0 0 .9rem; }
+  section.clause p:last-child{ margin-bottom:0; }
+  section.clause ul{ margin:0 0 .9rem; padding-left:1.3rem; }
+  section.clause li{ margin-bottom:.4rem; }
+  section.clause strong{ color:var(--brown); }
+  section.clause table{
+    width:100%;
+    border-collapse:collapse;
+    margin:0 0 .9rem;
+    font-size:.95rem;
+  }
+  section.clause th, section.clause td{
+    text-align:left;
+    padding:.55rem .6rem;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  section.clause th{ color:var(--yellow-deep); font-family:'Baloo 2', sans-serif; }
+
+  .note{
+    background:var(--note-bg);
+    border-left:4px solid var(--note);
+    border-radius:12px;
+    padding:.9rem 1.1rem;
+    font-size:.96rem;
+    color:#7a3a32;
+    margin:1rem 0;
+  }
+  .note strong{ color:#7a3a32; }
+
+  footer{
+    text-align:center;
+    padding:3rem 1.5rem 4rem;
+    color:var(--brown-soft);
+    font-size:.95rem;
+  }
+  footer .mascot-small{
+    width:56px; height:56px; border-radius:50%; object-fit:cover;
+    box-shadow:0 0 0 5px var(--white), var(--shadow);
+    margin-bottom:1rem;
+  }
+  footer a{ color:var(--yellow-deep); font-weight:700; }
+
+  ::selection{ background:var(--yellow-soft); }
+
+  @media (prefers-reduced-motion: no-preference){
+    section.clause{ transition: box-shadow .2s ease; }
+    section.clause:hover{ box-shadow: var(--shadow); }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <img class="mascot" src="mascot.png" alt="Lumi, das Maskottchen des Bots">
+    <div class="eyebrow">Discord Bot</div>
+    <h1>Lumis Datenschutzerklärung</h1>
+    <p>Was mit deinem Profilbild und Namen passiert, wenn du einen Lumi-Befehl benutzt — hier steht alles dazu.</p>
+  </div>
+  <div class="wave" aria-hidden="true"></div>
+</header>
+
+<main>
+  <p class="updated">Zuletzt aktualisiert: 11. August 2026</p>
+
+  <nav class="toc" aria-label="Inhaltsverzeichnis">
+    <h2>Inhalt</h2>
+    <ol>
+      <li><a href="#verantwortlicher">Verantwortlicher</a></li>
+      <li><a href="#daten">Welche Daten verarbeitet werden</a></li>
+      <li><a href="#speicherdauer">Speicherdauer</a></li>
+      <li><a href="#weitergabe">Weitergabe an Dritte</a></li>
+      <li><a href="#hosting">Hosting dieser Website</a></li>
+      <li><a href="#rechte">Deine Rechte</a></li>
+      <li><a href="#aenderungen">Änderungen dieser Erklärung</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ol>
+  </nav>
+
+  <section class="clause" id="verantwortlicher">
+    <div class="num">§ 1</div>
+    <h2>Verantwortlicher</h2>
+    <p>Verantwortlich für die Datenverarbeitung im Zusammenhang mit der Nutzung des Discord-Bots Lumi ist:</p>
+    <p><strong>[Dein Name / Projektname]</strong><br>
+    [Adresse, falls erforderlich]<br>
+    E-Mail: <a href="mailto:deine-email@beispiel.de">deine-email@beispiel.de</a></p>
+    <div class="note"><strong>Hinweis:</strong> Trage hier deinen echten Namen bzw. deine Kontaktdaten ein, bevor du diese Seite veröffentlichst. Eine Datenschutzerklärung ohne verantwortliche Person ist rechtlich nicht vollständig.</div>
+  </section>
+
+  <section class="clause" id="daten">
+    <div class="num">§ 2</div>
+    <h2>Welche Daten Lumi verarbeitet</h2>
+    <p>Lumi verarbeitet Daten ausschließlich dann, wenn ein Befehl (z. B. <code>/hug</code>, <code>/kiss</code>, <code>/slap</code>) auf einem Discord-Server ausgeführt wird, auf dem Lumi aktiv ist.</p>
+    <table>
+      <tr><th>Datenart</th><th>Zweck</th></tr>
+      <tr><td>Avatar (Profilbild)</td><td>Wird in das erzeugte Bild eingefügt</td></tr>
+      <tr><td>Anzeigename / Nutzername</td><td>Wird im erzeugten Bild angezeigt</td></tr>
+      <tr><td>Discord-ID</td><td>Technisch nötig, um Avatar und Namen korrekt zuzuordnen</td></tr>
+      <tr><td>Server-ID und Kanal-ID</td><td>Technisch nötig, damit die Antwort im richtigen Kanal ankommt</td></tr>
+    </table>
+    <p>Diese Daten werden über die offizielle Discord-API abgerufen. Es werden keine Nachrichteninhalte, keine privaten Chats und keine Daten von Personen erhoben, die nicht direkt an einem Befehl beteiligt sind.</p>
+    <h3>Rechtsgrundlage</h3>
+    <p>Die Verarbeitung erfolgt auf Grundlage berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO), nämlich der Bereitstellung der von dir aktiv angeforderten Funktion. Da du den Befehl selbst auslöst, liegt zugleich eine konkludente Einwilligung in diese kurzzeitige Verarbeitung vor.</p>
+  </section>
+
+  <section class="clause" id="speicherdauer">
+    <div class="num">§ 3</div>
+    <h2>Speicherdauer</h2>
+    <p>Die in § 2 genannten Daten werden ausschließlich im Arbeitsspeicher verarbeitet, solange das angeforderte Bild erstellt wird. Nach dem Versand des Bildes in den Discord-Kanal werden sie <strong>nicht dauerhaft gespeichert</strong> und nicht in einer Datenbank abgelegt.</p>
+    <p>Technische Betriebsdaten wie Fehlerprotokolle (z. B. bei Abstürzen) können vorübergehend zur Fehlerbehebung gespeichert werden und werden regelmäßig gelöscht.</p>
+  </section>
+
+  <section class="clause" id="weitergabe">
+    <div class="num">§ 4</div>
+    <h2>Weitergabe an Dritte</h2>
+    <p>Eine Weitergabe deiner Daten an Dritte findet nicht statt, mit Ausnahme der folgenden, für den Betrieb notwendigen Dienste:</p>
+    <ul>
+      <li><strong>Discord Inc.</strong> — als Plattform, über die der Bot betrieben wird. Es gilt die <a href="https://discord.com/privacy" target="_blank" rel="noopener">Datenschutzrichtlinie von Discord</a>.</li>
+      <li><strong>Hosting-Anbieter des Bots</strong> — [Name des Hosters eintragen, z. B. Hetzner, Railway, Replit …], auf dessen Servern Lumi läuft.</li>
+    </ul>
+    <p>Ein Verkauf von Daten an Werbetreibende oder sonstige Dritte findet nicht statt.</p>
+  </section>
+
+  <section class="clause" id="hosting">
+    <div class="num">§ 5</div>
+    <h2>Hosting dieser Website</h2>
+    <p>Diese Website wird über <strong>GitHub Pages</strong> bereitgestellt, einen Dienst der GitHub, Inc. bzw. GitHub International Limited. Beim Aufruf dieser Seite verarbeitet GitHub technisch notwendige Daten wie deine IP-Adresse, um die Seite ausliefern zu können.</p>
+    <p>Diese Website selbst setzt keine eigenen Cookies und bindet keine Tracking- oder Analyse-Tools ein. Näheres zur Datenverarbeitung durch GitHub findest du in der <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</p>
+  </section>
+
+  <section class="clause" id="rechte">
+    <div class="num">§ 6</div>
+    <h2>Deine Rechte</h2>
+    <p>Dir stehen im Rahmen der geltenden Datenschutzgesetze (u. a. DSGVO) folgende Rechte zu:</p>
+    <ul>
+      <li>Auskunft über die zu deiner Person gespeicherten Daten</li>
+      <li>Berichtigung unrichtiger Daten</li>
+      <li>Löschung deiner Daten</li>
+      <li>Einschränkung der Verarbeitung</li>
+      <li>Widerspruch gegen die Verarbeitung</li>
+      <li>Beschwerde bei einer Datenschutz-Aufsichtsbehörde</li>
+    </ul>
+    <p>Da Lumi keine Daten dauerhaft speichert (siehe § 3), betreffen Auskunfts- und Löschanfragen in der Praxis vor allem technische Protokolldaten. Melde dich dazu gerne über die Kontaktdaten in § 8.</p>
+  </section>
+
+  <section class="clause" id="aenderungen">
+    <div class="num">§ 7</div>
+    <h2>Änderungen dieser Erklärung</h2>
+    <p>Diese Datenschutzerklärung kann angepasst werden, etwa wenn sich die Funktionen von Lumi oder die eingesetzten Dienste ändern. Das Datum der letzten Aktualisierung findest du oben auf dieser Seite.</p>
+  </section>
+
+  <section class="clause" id="kontakt">
+    <div class="num">§ 8</div>
+    <h2>Kontakt</h2>
+    <p>Bei Fragen zum Datenschutz oder zur Ausübung deiner Rechte:</p>
+    <ul>
+      <li>Discord: <a href="#">dein-discord-server-invite-link</a></li>
+      <li>E-Mail: <a href="mailto:deine-email@beispiel.de">deine-email@beispiel.de</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <img class="mascot-small" src="mascot.png" alt="">
+  <p>Gemacht mit ★ für die Lumi-Community · <a href="index.html">Nutzungsbedingungen</a> · <a href="#verantwortlicher">nach oben</a></p>
+</footer>
+
+</body>
+</html>
